@@ -10,13 +10,13 @@ WinMain proc
 	sub rsp,28h
   
   ;MessageBoxA arguments
-  mov rcx,0
+	xor rcx,rcx
 	mov rdx, offset _msg
 	mov r8, offset _title
-	mov r9d,0
+	xor r9d,r9d
   call MessageBoxA
   ;WinMain return 0
-	mov rax,0
+	xor rax,rax
 
 	add rsp,28h
 	ret
